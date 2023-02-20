@@ -1,9 +1,7 @@
-const adminRoute = require('./admin');
-const clientRoute = require('./client');
+const blogRoute = require('./blogRoutes');
 
 function route(app) {
-    app.use('/admin', adminRoute);
-    app.use('/', clientRoute);
+    app.use('/', blogRoute);
 }
 
 module.exports = route;

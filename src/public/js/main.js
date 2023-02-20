@@ -307,4 +307,75 @@
      * Initiate Pure Counter
      */
     new PureCounter();
+
+    /**
+     * Initiate tooltips
+     */
+    var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]'),
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    /**
+     * Initiate quill editors
+     */
+
+    if (select('.quill-editor-full')) {
+        new Quill('.quill-editor-full', {
+            modules: {
+                toolbar: [
+                    [
+                        {
+                            font: [],
+                        },
+                        {
+                            size: [],
+                        },
+                    ],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    [
+                        {
+                            color: [],
+                        },
+                        {
+                            background: [],
+                        },
+                    ],
+                    [
+                        {
+                            script: 'super',
+                        },
+                        {
+                            script: 'sub',
+                        },
+                    ],
+                    [
+                        {
+                            list: 'ordered',
+                        },
+                        {
+                            list: 'bullet',
+                        },
+                        {
+                            indent: '-1',
+                        },
+                        {
+                            indent: '+1',
+                        },
+                    ],
+                    [
+                        'direction',
+                        {
+                            align: [],
+                        },
+                    ],
+                    ['link', 'image', 'video'],
+                    ['clean'],
+                ],
+            },
+            theme: 'snow',
+        });
+    }
 })();

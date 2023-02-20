@@ -1,30 +1,33 @@
 {
-  "name": "node-blog-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon --inspect src/index.js",
-    "watch": "node-sass --watch src/resources/scss/main.scss --output src/public/css",
-    "beautiful-code": "prettier --single-quote --trailing-comma all --tab-width 4 --semi --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Tangnd",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "express-handlebars": "^6.0.7",
-    "json-server": "^0.17.1",
-    "mongoose": "^6.9.0",
-    "yarn": "^1.22.19"
-  },
-  "devDependencies": {
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.0",
-    "mongoose-slug-generator": "^1.0.4",
-    "node-sass": "^8.0.0",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.8.3"
-  }
+    "name": "node-blog-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon --inspect src/index.js",
+        "watch": "node-sass --watch src/resources/scss/main.scss --output src/public/css",
+        "formatcode": "prettier --single-quote --trailing-comma all --tab-width 4 --semi --write .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Tangnd",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.1",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "express-handlebars": "^6.0.7",
+        "json-server": "^0.17.1",
+        "mongoose": "^6.9.0",
+        "multer": "^1.4.5-lts.1",
+        "yarn": "^1.22.19"
+    },
+    "devDependencies": {
+        "husky": "^8.0.3",
+        "lint-staged": "^13.1.0",
+        "mongoose-slug-generator": "^1.0.4",
+        "node-sass": "^8.0.0",
+        "nodemon": "^2.0.20",
+        "prettier": "^2.8.3"
+    }
 }
